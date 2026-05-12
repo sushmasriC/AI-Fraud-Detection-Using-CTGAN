@@ -10,6 +10,14 @@
 
 ---
 
+# 🌐 Live Demo
+
+🚀 Streamlit App:  
+https://ai-fraud-detection-using-ctgan.streamlit.app/
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ai-fraud-detection-using-ctgan.streamlit.app/)
+---
+
 # 📌 Project Overview
 
 This project presents an AI-powered fraud detection system designed to identify fraudulent financial transactions using Machine Learning and CTGAN-generated synthetic data.
