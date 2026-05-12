@@ -1,103 +1,115 @@
 # 💳 AI Fraud Detection Using CTGAN
 
 <p align="center">
-  <img src="screenshots/dashboard_home.png" width="100%" alt="Dashboard Preview">
+  <img src="screenshots/dashboard_home.png" width="100%" alt="AI Fraud Detection Dashboard">
 </p>
 
 <p align="center">
-  <b>AI-Powered Fraud Detection using CTGAN Synthetic Data Generation and Machine Learning</b>
+  <b>AI-Powered Fraud Detection System using CTGAN Synthetic Data Generation and Machine Learning</b>
 </p>
 
 ---
 
 # 📌 Project Overview
 
-This project focuses on enhancing financial fraud detection using **CTGAN-generated synthetic fraud transactions** and **Machine Learning**.
+This project presents an AI-powered fraud detection system designed to identify fraudulent financial transactions using Machine Learning and CTGAN-generated synthetic data.
 
-Financial fraud datasets are highly imbalanced, making fraud detection extremely challenging. To address this issue, synthetic fraud samples were generated using **CTGAN (Conditional Tabular GAN)** to augment the minority fraud class and improve model learning performance.
+Fraud detection datasets are highly imbalanced because fraudulent transactions represent only a small percentage of total transactions. This imbalance often causes machine learning models to perform poorly on fraud cases.
 
-The project includes:
+To address this challenge, the project uses:
 
-- Exploratory Data Analysis (EDA)
-- Fraud pattern analysis
-- Synthetic fraud generation using CTGAN
-- Random Forest classification
-- Model evaluation and comparison
-- Interactive Streamlit dashboard deployment
+- **CTGAN (Conditional Tabular GAN)** for synthetic fraud data generation
+- **Random Forest Classifier** for fraud prediction
+- **Streamlit Dashboard** for interactive deployment and visualization
+
+The project demonstrates how Generative AI techniques can improve fraud detection capability in real-world financial systems.
 
 ---
 
-# 🚀 Features
+# 🚀 Key Features
 
 ✅ Fraud Detection using Machine Learning  
 ✅ CTGAN-based Synthetic Fraud Generation  
-✅ Interactive Streamlit Dashboard  
-✅ Fraud Probability Analysis  
 ✅ Real vs Synthetic Fraud Comparison  
-✅ Precision-Recall & ROC Curve Analysis  
+✅ Fraud Probability Analysis  
+✅ Precision-Recall & ROC Curve Evaluation  
+✅ Interactive Streamlit Dashboard  
 ✅ Downloadable Fraud Prediction Reports  
-✅ Professional Visualization Dashboard  
+✅ Professional Data Visualization  
 
 ---
 
-# 🛠️ Tech Stack
+# 🛠️ Technology Stack
 
-| Technology | Purpose |
+| Technology | Usage |
 |---|---|
-| Python | Core Programming |
+| Python | Core Development |
 | Pandas | Data Processing |
-| NumPy | Numerical Computing |
+| NumPy | Numerical Operations |
 | Scikit-learn | Machine Learning |
 | CTGAN / SDV | Synthetic Data Generation |
 | Matplotlib | Data Visualization |
 | Seaborn | Statistical Visualization |
-| Streamlit | Web Dashboard |
-| Joblib | Model Serialization |
-| Pyngrok | Public Dashboard Hosting |
+| Streamlit | Interactive Dashboard |
+| Joblib | Model Saving & Loading |
+| Pyngrok | Public Dashboard Access |
 
 ---
 
 # 📂 Dataset Information
 
-The project uses the famous **Credit Card Fraud Detection Dataset** containing anonymized transaction features.
+This project uses the publicly available **Credit Card Fraud Detection Dataset** containing anonymized transaction features.
 
-### Dataset Features
+## Dataset Features
 
 - `V1` to `V28` → PCA-transformed features
 - `Time` → Transaction timestamp
 - `Amount` → Transaction amount
 
-### Target Variable
+## Target Variable
 
-- `0` → Normal Transaction
-- `1` → Fraudulent Transaction
+| Value | Meaning |
+|---|---|
+| 0 | Normal Transaction |
+| 1 | Fraudulent Transaction |
 
 ---
 
-# 📊 Exploratory Data Analysis
+## Dataset Source
+
+Kaggle Dataset:  
+https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+
+> Note: The original dataset is not included in this repository due to file size limitations and dataset licensing considerations.
+
+---
+
+# 📊 Exploratory Data Analysis (EDA)
 
 The following analyses were performed:
 
 - Fraud vs Normal transaction distribution
 - Transaction amount distribution
-- Transaction time distribution
+- Transaction time analysis
 - Correlation heatmap
-- Real vs Synthetic fraud comparison
 - PCA visualization
+- Real vs Synthetic fraud comparison
+
+These analyses helped understand transaction behavior patterns and the impact of severe class imbalance.
 
 ---
 
 # 🧬 Synthetic Fraud Generation using CTGAN
 
-To overcome severe class imbalance:
+To improve fraud detection performance:
 
-1. Fraudulent transactions were isolated
+1. Fraud transactions were isolated from the dataset
 2. CTGAN was trained on fraud samples
 3. Synthetic fraud transactions were generated
 4. Real and synthetic fraud data were combined
-5. Augmented dataset was used for model training
+5. The augmented dataset was used for model training
 
-This improved the model’s ability to learn rare fraud patterns more effectively.
+This helped improve the model’s ability to identify rare fraud patterns more effectively.
 
 ---
 
@@ -109,12 +121,12 @@ This improved the model’s ability to learn rare fraud patterns more effectivel
 
 ## Training Strategy
 
-Two models were compared:
+Two separate models were evaluated:
 
 | Model | Description |
 |---|---|
 | Baseline Model | Trained on original imbalanced dataset |
-| Augmented Model | Trained using CTGAN synthetic fraud data |
+| Augmented Model | Trained using CTGAN-generated synthetic fraud data |
 
 ---
 
@@ -142,9 +154,9 @@ Two models were compared:
 
 # 🔍 Key Observation
 
-Although overall accuracy remained similar, the **fraud recall improved from 74% to 80%** after augmentation using CTGAN-generated synthetic fraud transactions.
+Although both models achieved similar overall accuracy, the augmented model improved fraud recall from **74% to 80%** after synthetic data augmentation.
 
-This demonstrates that synthetic data augmentation helped the model better learn fraud patterns and improve fraud detection capability.
+This demonstrates that CTGAN-generated synthetic fraud samples helped the model better learn fraud behavior patterns and improved fraud detection performance.
 
 ---
 
@@ -219,7 +231,7 @@ The Streamlit dashboard allows users to:
 pip install -r requirements.txt
 ```
 
-## 2️⃣ Run Streamlit Application
+## 2️⃣ Run the Streamlit Application
 
 ```bash
 streamlit run app.py
@@ -255,24 +267,23 @@ AI-Fraud-Detection-Using-CTGAN/
 # 📌 Future Improvements
 
 - Deep Learning-based fraud detection
-- Real-time fraud monitoring
+- Real-time fraud monitoring systems
 - Cloud deployment
 - Explainable AI integration
-- API integration for banking systems
+- Banking API integration
 
 ---
 
 # ✅ Conclusion
 
-This project demonstrates how **CTGAN-generated synthetic fraud data** can improve fraud detection performance in highly imbalanced financial datasets.
+This project demonstrates how Generative AI and Machine Learning can be combined to improve fraud detection performance in highly imbalanced financial datasets.
 
-By combining:
+By integrating:
+- CTGAN synthetic data generation
+- Random Forest classification
+- Interactive Streamlit deployment
 
-- Synthetic data generation
-- Machine Learning
-- Interactive dashboards
-
-the system provides a practical and scalable AI-powered fraud detection solution.
+the system provides a scalable and practical AI-powered fraud detection solution.
 
 ---
 
@@ -280,7 +291,5 @@ the system provides a practical and scalable AI-powered fraud detection solution
 
 ## Chanda Sushmasri
 
-AI & Data Science Enthusiast  
-Machine Learning | Deep Learning | Data Analytics
-
----
+- LinkedIn: https://www.linkedin.com/in/chanda-sushmasri/
+- GitHub: https://github.com/sushmasriC
